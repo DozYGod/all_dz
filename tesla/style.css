@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: "SF Pro Display";
+}
+
+header {
+    padding: 25px 0;
+    text-align: center;
+    background: #222;
+}
+
+header img {
+    width: 100px;
+    height: 13px;
+}
+
+.container h1 {
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.car {
+    background-image: url(./img/tesla.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 1240px;
+    height: 480px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 537px;
+    margin: 0 auto;
+}
+
+.info span{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070;
+}
+
+.info p{
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 79px; 
+    color: #000000;
+}
+
+.bot {
+    margin: 55px auto;
+    width: 1147px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bot span{
+    font-weight: 500;
+    font-size: 14px;
+    color: #707070; 
+}
+
+.bot p{
+    font-weight: 700;
+    font-size: 48px;
+    color: #000000;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.item img{
+    width: 22px;
+    height: 22px;
+    display: block;
+    margin-top: 6px;
+}
+
+.att {
+    margin-left: 34px;
+}
+
+.checher input{
+    display: block;
+}
+
+/* keyframes */
+
+.small {
+    background-image: url(./img/wheel-19.000182ec.png);
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: move .25s steps(6) infinite;
+}
+
+.big-noact {
+    background-image: url(./img/wheel-21.a3203d2a.png);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: none;
+}
+
+.big {
+    background-image: url(./img/wheel-21.a3203d2a.png);
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: move .25s steps(6) infinite;
+}
+
+.left {
+    left: 315px;
+    top: 235px;
+    position: absolute;
+}
+
+.right {
+    right: 340px;
+    top: 235px;
+    position: absolute;
+}
+
+@keyframes move {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+/* чекбоксы */
+
+input[type="checkbox"] {
+    position: relative;
+    width: 39px;
+    height: 24px;
+    -webkit-appearance: none;
+    outline: none;
+    background-color: #8E9AA7;
+    border-radius: 20px;
+    transition: .5s ease;
+    margin-top: 6px;
+}
+
+input:checked[type="checkbox"] {
+    background: #004DFF;
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 4px;
+    left: 4px;
+    background-color: white;
+    transition: .5s ease;
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+
+input:checked[type="checkbox"]::before {
+    left: 20px;
+}
+
+.frt {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 800px;
+    top: 250px;
+    z-index: 10;
+}
